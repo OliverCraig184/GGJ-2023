@@ -23,15 +23,18 @@ public class PlayerMovement : MonoBehaviour
     public Image HungerBar;
 
 
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+
     }
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
         Move();
-        if (Water >= 0)
+        if ((Water >= 0) && (Input.GetKey(KeyCode.J)))
         {
             Water -= 1;
         }
@@ -54,9 +57,6 @@ public class PlayerMovement : MonoBehaviour
         ProcessInputs();
         WaterBar.fillAmount = Water / 100;
         HungerBar.fillAmount = Hunger / 100;
-
-
-
     }
     private void ProcessInputs()
     {
