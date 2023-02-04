@@ -32,6 +32,23 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
         Move();
+        if (Input.GetKey(KeyCode.J) && (Water >= 0))
+        {
+            Water -= 1;
+        }
+
+        if (Input.GetKey(KeyCode.K) && (Hunger >= 0))
+        {
+            Hunger -= 1;
+        }
+        if (Input.GetKey(KeyCode.L) && (Water < 100))
+        {
+            Water += 1;
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            Hunger += 1;
+        }
     }
 
     void Update()
@@ -52,23 +69,8 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
         }
-        if (Input.GetKey(KeyCode.J))
-        {
-            Water -= 1;
-        }
+        
 
-        if (Input.GetKey(KeyCode.K))
-        {
-            Hunger -= 1;
-        }
-        if (Input.GetKey(KeyCode.L))
-        {
-            Water += 1;
-        }
-        if (Input.GetKey(KeyCode.P))
-        {
-            Hunger += 1;
-        }
 
 
 
