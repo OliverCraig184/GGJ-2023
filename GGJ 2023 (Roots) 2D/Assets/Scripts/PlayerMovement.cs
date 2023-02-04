@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public float Hunger;
     public Image WaterBar;
     public Image HungerBar;
+    public Animator animator;
 
 
 
@@ -61,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         moveDirection = Input.GetAxis("Horizontal");
-
+        animator.SetFloat("Speed", Mathf.Abs(moveDirection));
         if (Input.GetKey(KeyCode.W) && isGrounded)
         {
             isJumping = true;
