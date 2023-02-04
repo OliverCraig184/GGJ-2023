@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundObjects;
     private bool isGrounded;
     public float checkRadius;
+    public float Water;
+    public float Hunger;
+    public Image WaterBar;
+    public Image HungerBar;
 
 
     private void Awake()
@@ -32,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         ProcessInputs();
+        WaterBar.fillAmount = Water / 100;
+        HungerBar.fillAmount = Hunger / 100;
 
 
 
@@ -45,7 +52,25 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
         }
-        
+        if (Input.GetKey(KeyCode.J))
+        {
+            Water -= 1;
+        }
+
+        if (Input.GetKey(KeyCode.K))
+        {
+            Hunger -= 1;
+        }
+        if (Input.GetKey(KeyCode.L))
+        {
+            Water += 1;
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            Hunger += 1;
+        }
+
+
 
     }
     private void Move()
