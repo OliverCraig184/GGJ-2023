@@ -40,12 +40,12 @@ public class PlayerMovement : MonoBehaviour
     {
         
         moveDirection = Input.GetAxis("Horizontal");
-        /*
+        
         if(Input.GetKey(KeyCode.W) && isGrounded)
         {
             isJumping = true;
         }
-        */
+        
 
     }
     private void Move()
