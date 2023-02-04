@@ -2260,8 +2260,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   checkRadius: 1
-  Water: 300
-  Hunger: 300
+  Water: 100
+  Hunger: 100
   WaterBar: {fileID: 1664452217}
   HungerBar: {fileID: 831830192}
 --- !u!50 &1793516160
