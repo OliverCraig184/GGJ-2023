@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PotChanger : MonoBehaviour
 {
-    public int i = 0;
+    private int i = 0;
     public Sprite[] potSpriteArray;
     public Sprite equippedSprite;
+    public GameObject buttonToBeToggled;
     
     private void Update()
     {
@@ -19,7 +20,16 @@ public class PotChanger : MonoBehaviour
             i = 2;
         }
         gameObject.GetComponent<SpriteRenderer>().sprite = potSpriteArray[i];
+        if (equippedSprite != potSpriteArray[i])
+        {
+            buttonToBeToggled.SetActive(true);
+        }
+        else
+        {
+            buttonToBeToggled.SetActive(false);
+        }
     }
+
     public void EquipPot()
     {
         equippedSprite = potSpriteArray[i];
