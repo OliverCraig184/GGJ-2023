@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public Text MyText;
     public float moveSpeed;
     public Rigidbody2D rb;
     public float jumpForce;
@@ -27,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
-
     }
     void FixedUpdate()
     {
@@ -51,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Hunger += 1;
         }
+
     }
     void Update()
     {
