@@ -734,9 +734,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498438538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: 9.09, z: 0}
-  m_LocalScale: {x: 5.495381, y: 14.15777, z: 4.2262}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0.3, y: 10.49, z: 0}
+  m_LocalScale: {x: 3.6065497, y: 3.0467696, z: 5.16019}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 385718389}
   m_RootOrder: -1
@@ -779,10 +779,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2123577947
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c13cd1d05cf78647a2e45ab373a2dbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2230,6 +2230,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 85b82ebf987a4b649a0750f4f5660e0c, type: 3}
   - {fileID: 21300000, guid: d7aa772921c82844db3538400e1b753f, type: 3}
   equippedSprite: {fileID: 21300000, guid: 66133520e949fd74c85e9434fb015e29, type: 3}
+  equipButton: {fileID: 50113099}
 --- !u!212 &1619692533
 SpriteRenderer:
   m_ObjectHideFlags: 0

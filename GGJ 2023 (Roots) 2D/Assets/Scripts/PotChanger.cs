@@ -7,6 +7,7 @@ public class PotChanger : MonoBehaviour
     public int i = 0;
     public Sprite[] potSpriteArray;
     public Sprite equippedSprite;
+    public GameObject equipButton;
     
     private void Update()
     {
@@ -19,6 +20,14 @@ public class PotChanger : MonoBehaviour
             i = 2;
         }
         gameObject.GetComponent<SpriteRenderer>().sprite = potSpriteArray[i];
+        if (equippedSprite != potSpriteArray[i])
+        {
+            equipButton.SetActive(true);
+        }
+        else
+        {
+            equipButton.SetActive(false);
+        }
     }
     public void EquipPot()
     {
