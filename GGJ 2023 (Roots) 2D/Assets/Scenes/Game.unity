@@ -732,9 +732,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498438538}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.052330997, y: -0.442, z: 0}
-  m_LocalScale: {x: 0.68531823, y: 0.61950463, z: 0.18492673}
+
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -778,7 +776,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 372705595
+
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4c13cd1d05cf78647a2e45ab373a2dbc, type: 3}
@@ -2228,7 +2226,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 85b82ebf987a4b649a0750f4f5660e0c, type: 3}
   - {fileID: 21300000, guid: d7aa772921c82844db3538400e1b753f, type: 3}
   equippedSprite: {fileID: 21300000, guid: 66133520e949fd74c85e9434fb015e29, type: 3}
-  buttonToBeToggled: {fileID: 50113099}
 --- !u!212 &1619692533
 SpriteRenderer:
   m_ObjectHideFlags: 0
