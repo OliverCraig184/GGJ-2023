@@ -21,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
     public float Hunger;
     public Image WaterBar;
     public Image HungerBar;
+    public Animator animator;
+    public Transform pickupCheck;
+    public LayerMask waterPickup;
+    public LayerMask groundPickup;
 
 
 
@@ -30,6 +34,32 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (Physics2D.OverlapCircle(pickupCheck.position,checkRadius,waterPickup))
+        {
+
+            if (Water <= 50)
+            {
+                Water += 50;
+            }
+            else if(Water > 50)
+            {
+                Water += (100-Water);
+            }
+            
+
+
+        }
+        if (Physics2D.OverlapCircle(pickupCheck.position,checkRadius,groundPickup))
+            {
+                if (Hunger <= 50)
+                {
+                    Hunger += 50;
+                }
+                else if (Hunger > 50)
+                {
+                    Hunger += (100-Hunger);
+                }
+            }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
         Move();
         if ((Water >= 0) & (Input.GetKey(KeyCode.J)))
@@ -61,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         moveDirection = Input.GetAxis("Horizontal");
-
+        animator.SetFloat("Speed", Mathf.Abs(moveDirection));
         if (Input.GetKey(KeyCode.W) && isGrounded)
         {
             isJumping = true;
