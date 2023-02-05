@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PotChanger : MonoBehaviour
 {
-    public int i = 0;
+    private int i = 0;
     public Sprite[] potSpriteArray;
     public Sprite equippedSprite;
-    public GameObject equipButton;
+
     
     private void Update()
     {
@@ -22,13 +22,10 @@ public class PotChanger : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = potSpriteArray[i];
         if (equippedSprite != potSpriteArray[i])
         {
-            equipButton.SetActive(true);
-        }
-        else
-        {
-            equipButton.SetActive(false);
+
         }
     }
+
     public void EquipPot()
     {
         equippedSprite = potSpriteArray[i];
