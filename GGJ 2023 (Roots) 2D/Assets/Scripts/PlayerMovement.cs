@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(pickupCheck.position,checkRadius,waterPickup))
         {
+
             if (Water <= 50)
             {
                 Water += 50;
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Water += (100-Water);
             }
+            
 
 
         }
